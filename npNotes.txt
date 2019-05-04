@@ -1,9 +1,25 @@
 Angular Notes:
 
+--- Lesson 1-6: ---
+
 install new project :
 	ng new my-first-app
 
-Bring up Development server
+Bring up Development server (while in the aangular project)
 	ng serve
+
+To add 'ngModel' to app.component.html
+	in app.module.ts add 'import{ FormsModule } from '@angular/forms' at the top
+	and FormsModule in 
+	ex:
+	imports: [
+    BrowserModule,
+    FormsModule
+  ]
+
+  --- Lesson 1-10: ---
+
+  
+
 
 
