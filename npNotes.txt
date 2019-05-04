@@ -17,9 +17,18 @@ To add 'ngModel' to app.component.html
     FormsModule
   ]
 
-  --- Lesson 1-10: ---
+--- Lesson 1-10: ---
 
-  
+to instal bootstrap (local dev copy)
+   npm i --save bootstrap
+and to use it in angular.json file. under styles add path to node_modules:
+	ex:
+	"styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "src/styles.css"
+            ],
 
+
+--- Lesson 2-0: ---
 
 
