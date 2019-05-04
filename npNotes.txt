@@ -1,0 +1,4 @@
+Angular Notes:
+
+install new project :
+	ng new my-first-app
