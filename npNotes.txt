@@ -29,6 +29,13 @@ and to use it in angular.json file. under styles add path to node_modules:
             ],
 
 
---- Lesson 2-0: ---
+--- Lesson 2-4: ---
+
+to Add a component:
+	1. Create a folder under App name (app > server)
+	2. Create a file in the folder from 1.
+	3. Name file same as folder then components and then extention 
+		ts for typescript (server.component.ts)
+	4. 
 
 
