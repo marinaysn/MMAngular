@@ -36,6 +36,20 @@ to Add a component:
 	2. Create a file in the folder from 1.
 	3. Name file same as folder then components and then extention 
 		ts for typescript (server.component.ts)
-	4. 
+	4. component is just a class.We should export this class to use it
+		export class ServerComponent {
+		}
+	5. it needs a decorator @Component with valid import
+	6. Then configure inside decorator with selector, templateUrl, etc
+
+
+--- Lesson 2-5: ---
+
+Components are used to build webPages and Modules to bind Components 
+(or other peices)
+Need to register component before using it (in app.module.ts)
+add ServerComponent and imporrt to it
+
+--- Lesson 2-6: ---
 
 
