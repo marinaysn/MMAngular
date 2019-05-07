@@ -83,5 +83,23 @@ ex2:
   styleUrls: ['./servers.component.css']
 })
 
+--- Lesson 2-20: ---
 
+styles  can be set in app.component.css file
+styles can also be overwritten
+in app.component.ts
+ex:
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  // styleUrls: ['./app.component.css', './newStyle.css']
+
+  styles: [`
+    h3{
+      color: green;
+    }
+  `]
+})
+
+--- Lesson 2-21: ---
 
