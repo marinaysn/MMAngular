@@ -59,3 +59,29 @@ to autp generate new component from cli (new terminal)
 3. CLI will auto create folder with all needed files in it
 
 
+--- Lesson 2-19: ---
+
+to work with templates: you can write html code inside typescript document
+in servers.components.ts remove 'templateURL' and add 'template'
+ex:
+@Component({
+  selector: 'app-servers',
+  template: '<app-server></app-server><app-server></app-server>',
+  styleUrls: ['./servers.component.css']
+})
+
+decorator must always have either templateURL or template
+
+or 
+ex2:
+@Component({
+  selector: 'app-servers',
+  template: `
+    <app-server></app-server>
+      <p>Test</p>
+    <app-server></app-server>`,
+  styleUrls: ['./servers.component.css']
+})
+
+
+
