@@ -85,8 +85,8 @@ ex2:
 
 --- Lesson 2-20: ---
 
-styles  can be set in app.component.css file
-styles can also be overwritten
+styles  can be set in external file app.component.css file
+styles can also be overwritten inline 
 in app.component.ts
 ex:
 @Component({
@@ -101,5 +101,26 @@ ex:
   `]
 })
 
+NOTE: Styles or styleURLs must be an array [ '', '' ]
+
 --- Lesson 2-21: ---
 
+Learning decorator selector:
+in servers.component.ts change selector to be an attribute: '[app-servers]' instead of selector: 'app-root',
+ex:
+@Component({
+  selector: '[app-servers]',
+  template: `
+    <app-server></app-server>
+      <p>Test</p>
+    <app-server></app-server>`,
+  styleUrls: ['./servers.component.css']
+})
+
+We also need to use now this selector as an attribute in app.component.html file asex:
+	ex:
+	<!-- <app-servers> loading...</app-servers> -->
+      <div app-servers></div>
+
+or you can use it as class:
+	selector: '.app-servers',
