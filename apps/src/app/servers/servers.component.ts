@@ -13,15 +13,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ServersComponent implements OnInit {
 
-  allowNewServer = false;
+  allowNewServer = false
+  weather = "Is it raining now?";
+  serverCreationSatus = "No servers were created"
 
   constructor() {
     setTimeout(() => {
       this.allowNewServer = true;
-    } , 2000);
+      this.weather = "No, it is sunshine!";
+    }, 2000);
   }
 
-  ngOnInit() {
+  ngOnInit() { }
+  onCreateServer() {
+    this.serverCreationSatus = "Server was created!"
   }
+
 
 }
