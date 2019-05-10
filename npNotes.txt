@@ -124,3 +124,73 @@ We also need to use now this selector as an attribute in app.component.html file
 
 or you can use it as class:
 	selector: '.app-servers',
+
+
+  --- Lesson 2-24: ---
+
+  String Interpolation - 
+  is the process of evaluating a string literal containing one or more placeholders, yielding a result in which the placeholders are replaced with their corresponding values
+
+  ex:
+  in server.component.ts under export
+code variables:
+
+export class ServerComponent {
+serverId = 10;
+serverStatus = 'offline'
+}
+
+then use them in 
+server.component.html
+
+<p>{{'Server'}} with ID {{ serverId }} is {{ serverStatus }} </p>
+
+or you can call a method
+
+export class ServerComponent {
+    serverId = 10;
+    serverStatus = 'offline'
+
+    getServerStatus() {
+        return this.serverStatus;
+    }
+}
+
+<p>{{'Server'}} with ID {{ serverId }} is {{ getServerStatus()  }} </p>
+
+
+  --- Lesson 2-25: ---
+
+Property Binding
+
+ in server.component.html
+<button 
+    class="btn btn-primary"
+    [disabled]="!allowNewServer">Add Server</button>
+
+<app-server></app-server>
+
+
+and in in server.component.ts
+
+
+export class ServersComponent implements OnInit {
+
+  allowNewServer = false;
+
+  constructor() {
+    setTimeout(() => {
+      this.allowNewServer = true;
+    } , 2000);
+  }
+
+  ngOnInit() {
+  }
+
+}
+
+  --- Lesson 2-26: ---
+
+
+
+  
