@@ -279,4 +279,24 @@ in .ts add styles component
     --- Lesson 2-39: ---
     Lists
 
-    
+    in .html file add ngFor property
+
+    <p *ngIf="serverCreated">Server was created, server name {{ serverName }}</p>
+<app-server *ngFor="let s of servers"></app-server>
+
+in .ts file
+
+export class ServersComponent implements OnInit {
+......
+  serverCreated = false;
+  servers = ['TestServer', 'MarinaServer', 'PaulServer']
+....
+  onCreateServer() {
+    this.serverCreationSatus = "Server was created! and Server Name is " + this.serverName
+    this.serverCreated = true;
+    this.servers.push(this.serverName);
+  }
+  .....
+}
+
+   --- Lesson 2-40: ---
