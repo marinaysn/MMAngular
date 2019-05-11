@@ -24,10 +24,12 @@ class="form-control"
 <p>{{ allowNewServer }}</p>
 <h3 [innerText]="weather"></h3> -->
 
-<p *ngIf="serverCreated; else noServer">Server was created, server name {{ serverName }}</p>
+<p *ngIf="serverCreated">Server was created, server name {{ serverName }}</p>
 
+<!-- use of ngIf else -->
+<!-- <p *ngIf="serverCreated; else noServer">Server was created, server name {{ serverName }}</p>
 <ng-template #noServer>
   <p>No server was created!</p>
-</ng-template>
+</ng-template> -->
 
 <app-server></app-server>
