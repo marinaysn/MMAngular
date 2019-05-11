@@ -7,9 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Assingment2Component implements OnInit {
 
-  username = "";
-  usernameSaved = "";
-  notEmpty = true;
+  username: String = "";
+  usernameSaved: String  = "";
+  empty: Boolean = true;
 
   constructor() { }
 
@@ -20,17 +20,16 @@ export class Assingment2Component implements OnInit {
 
       this.usernameSaved = "UserName entered is: " + this.username;
       this.username = ""
-      this.notEmpty = true;
+      this.empty = true;
 
   }
 
   onUserNameUpdate(event: Event) {
 
     if ((<HTMLInputElement>event.target).value.trim()) {
-      this.notEmpty = false;
-
+      this.empty = false;
     }
     else
-      this.notEmpty = true;
+      this.empty = true;
   }
 }
