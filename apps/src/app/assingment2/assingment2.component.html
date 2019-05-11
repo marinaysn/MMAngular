@@ -1,0 +1,31 @@
+<!-- 
+  1. Add a input field which updated property ('username') via Two-Way-Binding
+  2. Output the username via String Interpolation (in paragraph below the imput)
+  3. Add a buttom which may only be clicked is the username is NOT 
+    an empty string
+  4. Upon clicking the button, the username shoud be reset to an empty string
+
+ -->
+
+<input
+  type="text"
+  class="form-control"
+  [(ngModel)]="username"
+  (input)="onUserNameUpdate($event)"
+/>
+
+<p>
+  {{ username }}
+</p>
+
+<br />
+
+<button
+  class="btn btn-outline-primary"
+  [disabled]="!notEmpty"
+  (click)="onReset()"
+>
+  Reset
+</button>
+
+<p [innerText]="usernameSaved"></p>

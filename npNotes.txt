@@ -52,7 +52,7 @@ add ServerComponent and imporrt to it
 
 --- Lesson 2-18: ---
 
-to autp generate new component from cli (new terminal)
+to auto generate new component from cli (new terminal)
 1.open new terminal while app is still running
 2. type in new terminal ng generate component <newComponent>
 	or ng g c <newName>
@@ -199,7 +199,17 @@ ex: in example.ts file
 (input)="onUpdateServerName($event)"/><br />
 
 
+ --- Lesson 2-31: ---
+ Two-Way Binding
 
+ must use FormsModule in app.module.ts file to use two-way data Binding
+ in .html file
 
+ <input 
+type="text" 
+class="form-control" 
+[(ngModel)]="serverName"><br />
 
+ --- Lesson 2-32: ---
+Combining all Forms of Databinding
   
