@@ -210,8 +210,28 @@ type="text"
 class="form-control" 
 [(ngModel)]="serverName"><br />
 
- --- Lesson 2-33: ---
+ --- Lesson 2-35: ---
 Directives - instruction in the DOM
+
+use of *ngIf 
+ex:
+in .html file add 
+
+<p *ngIf="serverCreated">Server was created, server name {{ serverName }}</p>
+
+in .ts
+
+add variable   serverCreated = false;
+
+and set it in one of function where is appropriate to run
+
+(in following example on click event of the button)
+onCreateServer() {
+    this.serverCreationSatus = "Server was created! and Server Name is " + this.serverName
+    this.serverCreated = true;
+  }
+
+ --- Lesson 2-36: ---
 
 
 

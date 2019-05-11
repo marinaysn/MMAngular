@@ -8,7 +8,7 @@ class="form-control"
 [(ngModel)]="serverName"><br />
 
 <!-- <p>{{ serverName }}</p> -->
-<label for="MYServerName"> Server Name </label><br />
+<label for="MYServerName"> Server Name: </label><br />
 
 <button
   class="btn btn-primary"
@@ -17,18 +17,13 @@ class="form-control"
   name="MYServerName">
   Add Server
 </button>
+<br /><hr />
 
-<br />
-<br />
-<hr />
-
-<p>{{ serverCreationSatus }}</p>
-
-<br />
-<br />
-<hr />
-
+<!-- <p>{{ serverCreationSatus }}</p>
+<br /><hr />
 <p>{{ allowNewServer }}</p>
-<h3 [innerText]="weather"></h3>
+<h3 [innerText]="weather"></h3> -->
+
+<p *ngIf="serverCreated">Server was created, server name {{ serverName }}</p>
 
 <app-server></app-server>
