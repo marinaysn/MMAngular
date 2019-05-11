@@ -233,5 +233,12 @@ onCreateServer() {
 
  --- Lesson 2-36: ---
 
+ngIf else - alternative to add additional condition
 
+<p *ngIf="serverCreated; else noServer">Server was created, server name {{ serverName }}</p>
 
+<ng-template #noServer>
+  <p>No server was created!</p>
+</ng-template>
+
+ --- Lesson 2-37: ---
