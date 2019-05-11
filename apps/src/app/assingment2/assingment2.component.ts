@@ -17,11 +17,9 @@ export class Assingment2Component implements OnInit {
   }
 
   onReset() {
-
       this.usernameSaved = "UserName entered is: " + this.username;
       this.username = ""
       this.empty = true;
-
   }
 
   onUserNameUpdate(event: Event) {
