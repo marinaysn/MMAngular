@@ -210,6 +210,8 @@ type="text"
 class="form-control" 
 [(ngModel)]="serverName"><br />
 
- --- Lesson 2-32: ---
-Combining all Forms of Databinding
-  
+ --- Lesson 2-33: ---
+Directives - instruction in the DOM
+
+
+
