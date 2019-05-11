@@ -9,7 +9,7 @@ export class Assingment2Component implements OnInit {
 
   username = "";
   usernameSaved = "";
-  notEmpty = false;
+  notEmpty = true;
 
   constructor() { }
 
@@ -18,22 +18,15 @@ export class Assingment2Component implements OnInit {
 
   onReset() {
 
-    if (this.username.trim() === "") {
-
-      this.notEmpty = true;
-    }
-
-    else {
-      this.notEmpty = false;
       this.usernameSaved = "UserName entered is: " + this.username;
       this.username = ""
-    }
+      this.notEmpty = true;
 
   }
 
   onUserNameUpdate(event: Event) {
 
-    if ((<HTMLInputElement>event.target).value.trim() === "") {
+    if ((<HTMLInputElement>event.target).value.trim()) {
       this.notEmpty = false;
 
     }
