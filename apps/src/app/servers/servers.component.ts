@@ -16,6 +16,7 @@ export class ServersComponent implements OnInit {
   allowNewServer = false
   weather = "Is it raining now?";
   serverCreationSatus = "No servers were created"
+serverName ='test Server Name';
 
   constructor() {
     setTimeout(() => {
@@ -27,6 +28,11 @@ export class ServersComponent implements OnInit {
   ngOnInit() { }
   onCreateServer() {
     this.serverCreationSatus = "Server was created!"
+  }
+
+  onUpdateServerName(event: Event) {
+    console.log(event);
+    this.serverName = (<HTMLInputElement>event.target).value;
   }
 
 

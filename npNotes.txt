@@ -189,7 +189,16 @@ export class ServersComponent implements OnInit {
 
 }
 
-  --- Lesson 2-26: ---
+  --- Lesson 2-29: ---
+Passing data with event Binding
+use $event - a reserved variable name to pass as an argument in function
+or template (gives access to even data)
+
+ex: in example.ts file
+<br /><input type="text" class="form-control" 
+(input)="onUpdateServerName($event)"/><br />
+
+
 
 
 
