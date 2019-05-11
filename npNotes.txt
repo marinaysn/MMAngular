@@ -243,4 +243,40 @@ ngIf else - alternative to add additional condition
 
  --- Lesson 2-37: ---
 
- 
+ add Styles with ngStyle dynamically
+in .html 
+
+<p [ngStyle]="{backgroundColor: getColor()}">{{'Server'}} with ID {{ serverId }} is {{ serverStatus }} </p>
+
+in .ts
+
+  getColor(){
+        return this.serverStatus === 'online' ? 'green' : 'red';
+    }
+
+
+     --- Lesson 2-38: ---
+     ngClass
+
+     in .html add ngClass to element and run it only when server status is online
+
+     <p [ngStyle]="{backgroundColor: getColor()}"
+[ngClass]="{'online': serverStatus === 'online'}"
+>{{'Server'}} with ID {{ serverId }} is {{ serverStatus }} </p>
+
+in .ts add styles component
+
+@Component({
+    selector: 'app-server',
+    templateUrl: './server.component.html',
+    styles: [
+    `.online {
+        color: white;
+    }`
+]
+})
+
+    --- Lesson 2-39: ---
+    Lists
+
+    
