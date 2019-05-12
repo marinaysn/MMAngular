@@ -300,3 +300,8 @@ export class ServersComponent implements OnInit {
 }
 
    --- Lesson 2-40: ---
+
+    <p *ngFor="let item of logIt; let i = index" 
+  [ngClass]="{'online': i > 4}">{{ item }}</p>
+
+
