@@ -8,6 +8,8 @@ install new project :
 Bring up Development server (while in the aangular project)
 	ng serve
 
+  or ng serve --port 4200 --open
+
 To add 'ngModel' to app.component.html
 	in app.module.ts add 'import{ FormsModule } from '@angular/forms' at the top
 	and FormsModule in 
