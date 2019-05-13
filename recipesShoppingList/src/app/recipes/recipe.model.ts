@@ -1,17 +1,4 @@
-Angular Notes:
-
---- Lesson 3-49: ---
-
-Create a Model
-
-create new file:
-ex:
-recipe.model.ts
-
- and inside write a blueprint of a model (variables, constructor and methods if any):
- ex:
-
- export class Recipe {
+export class Recipe {
 
     public name: string;
     public description: string;
@@ -23,7 +10,3 @@ recipe.model.ts
         this.imagePath = img;
     }
 }
-
-
---- Lesson 3-50: ---
-
