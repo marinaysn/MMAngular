@@ -26,4 +26,10 @@ recipe.model.ts
 
 
 --- Lesson 3-50: ---
+use Model from lesson 49 as this
+ex:
+ recipes: Recipe[] = [];
 
+ and remember to import class model
+
+ 
