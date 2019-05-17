@@ -1,0 +1,40 @@
+--- Lesson 5-64 ---
+
+Bind to custom property
+in ex:
+<div class="col-xs-12">
+      <app-server-element 
+      *ngFor="let item of serverElements"
+      [element]="item"></app-server-element>
+    </div>
+
+    also need to declare element property to use woht decorator @Input()  
+
+    ex:
+    export class ServerElementComponent implements OnInit {
+      @Input()   element: {type: string, name: string, content: string};
+    constructor() { } ...................
+
+    and also import it from core:
+    ex:
+    import { Component, OnInit, Input } from '@angular/core';
+
+
+--- Lesson 5-65 ---
+
+To assing an alias (srvElement) use 
+
+ @Input('srvElement') element: {type: string, name: string, content: string};
+
+and 
+
+<div class="col-xs-12">
+      <app-server-element 
+      *ngFor="let item of serverElements"
+      [srvElement]="item"></app-server-element>
+    </div>
+  </div>
+</div>
+
+..........................
+
