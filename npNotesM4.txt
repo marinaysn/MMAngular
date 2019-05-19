@@ -174,13 +174,55 @@ in cockpit.ts we can use alias bpCreated. also use in app.html
     serverName: string, serverContent: string}>();
 ..........................
 
---- Lesson 5-70 ---
+--- Lesson 5-71 ---
 View Encapsulation
+...
+use 
+encapsulation: ViewEncapsulation.Emulated // None, Native
+in .ts file to forse css globally or localy only
+...
+ex:
+@Component({
+  selector: 'app-server-element',
+  templateUrl: './server-element.component.html',
+  styleUrls: ['./server-element.component.css'],
+  encapsulation: ViewEncapsulation.Emulated // None, Native
 
-
+})
 ..........................
 
---- Lesson 5-00 ---
+--- Lesson 5-72 ---
+Local References in Templates
+.....
+use #serverNameInput refrence locally to pass values
+.......
+ex:
+<label>Server Name</label>
+    <!-- <input type="text" class="form-control" [(ngModel)]="newServerName" /> -->
+    <input 
+    type="text" 
+    class="form-control" 
+    #serverNameInput
+    />
+.......
+    then pass in the button as this"
+.......
+    <!-- user local reference serverNameInput -->
+    <button class="btn btn-primary" (click)="onAddServer(serverNameInput)">
+      Add Server
+    </button>
+.......
+    in .ts file pass it as an argument with HTMLInputElement type:
+.......
+    ex:
+    
+    onAddServer(nameInput: HTMLInputElement) {
+    console.log(nameInput.value);
+    this.serverCreated.emit({ 
+      serverName: nameInput.value, 
+      serverContent: this.newServerContent})
+  }
+
 
 
 ..........................
