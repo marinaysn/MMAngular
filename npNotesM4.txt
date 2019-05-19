@@ -174,7 +174,8 @@ in cockpit.ts we can use alias bpCreated. also use in app.html
     serverName: string, serverContent: string}>();
 ..........................
 
---- Lesson 5-00 ---
+--- Lesson 5-70 ---
+View Encapsulation
 
 
 ..........................
