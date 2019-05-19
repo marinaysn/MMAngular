@@ -154,14 +154,24 @@ ex:
 
     ***********************************************
 
-
 ..........................
 
 --- Lesson 5-68 ---
-
 Assign alias to custom events
+in app.html
+ex: 
+<!-- use alias bpCreated (set in @Output in cockpit.ts) -->
+  <app-cockpit 
+  (serverCreated)="onServerAdded($event)"
+  (bpCreated)="onBlueprintAdded($event)"
+  ></app-cockpit>
 
 
+in cockpit.ts we can use alias bpCreated. also use in app.html
+  ex:
+// we can ue alias bpCreated. also use in app.html
+  @Output('bpCreated') blueprintCreated = new EventEmitter<{
+    serverName: string, serverContent: string}>();
 ..........................
 
 --- Lesson 5-00 ---
