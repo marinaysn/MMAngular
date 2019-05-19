@@ -6,14 +6,12 @@
 
     <div class="panel-heading">{{ element.name }}</div>
     <div class="panel-body">
-      <p>
-        <strong *ngIf="element.type === 'server'" 
-        style="color: red">{{
-          element.content
-        }}</strong>
+      <!-- move this to app.html. Instead use ng-content-->
+      <!-- <p>
+        <strong *ngIf="element.type === 'server'" style="color: red">{{element.content}}</strong>
+        <em *ngIf="element.type === 'blueprint'">{{ element.content }}</em>
+      </p> -->
+      <ng-content></ng-content>
 
-        <em *ngIf="element.type === 'blueprint'">
-          {{ element.content }}</em>
-      </p>
     </div>
   </div>

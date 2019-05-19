@@ -227,19 +227,52 @@ ex:
 
 --- Lesson 5-73 ---
 Get Access to the Template and DOM with @ViewChild
-.......
 
-.......
-ex:
+ex: in .ts
+@ViewChild('serverContentInput') serverContentInput: ElementRef;
 
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+  onAddServer(nameInput: HTMLInputElement) {
+    console.log(this.serverContentInput);
+    this.serverCreated.emit({ 
+      serverName: nameInput.value, 
+      serverContent: this.serverContentInput.nativeElement.value })
+  }
 
 ..........................
 
---- Lesson 5-00 ---
-.......
+--- Lesson 5-74 ---
 
+Projecting Content into Components with ng-content
+.......
+1. move complex tags in app.html. Here <p> tag is moved from server-element.html to app.html
 .......
 ex:
+<div class="col-xs-12">
+      <app-server-element 
+      *ngFor="let item of serverElements"
+      [srvElement]="item">
+      <p>
+          <strong *ngIf="item.type === 'server'" style="color: red">{{item.content}}</strong>
+          <em *ngIf="item.type === 'blueprint'">{{ item.content }}</em>
+        </p>
+    
+    </app-server-element>
+.......
+2. but in server-element add <ng-content></ng-content> instead
+ex:
+<div class="panel-body">
+  <ng-content></ng-content>
+</div>
+
+.......
+
+3. This will project into component.
+
 
 ..........................
 

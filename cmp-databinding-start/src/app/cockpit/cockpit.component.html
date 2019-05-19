@@ -10,8 +10,14 @@
     />
     
     <label>Server Content</label>
+    <!-- get access with DOM Elements instead of double binding-->
     <!-- <input type="text" class="form-control" [(ngModel)]="newServerContent" /> -->
-    <input type="text" class="form-control" [(ngModel)]="newServerContent" />
+    <input 
+    type="text" 
+    class="form-control" 
+    #serverContentInput
+    
+    />
   
     
     <br />
