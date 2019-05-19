@@ -8,7 +8,7 @@ in ex:
       [element]="item"></app-server-element>
     </div>
 
-    also need to declare element property to use woht decorator @Input()  
+    also need to declare element property to use with decorator @Input()  
 
     ex:
     export class ServerElementComponent implements OnInit {
@@ -40,7 +40,7 @@ and
 
 --- Lesson 5-66 ---
 
-Binding to Custom Event
+Binding to Custom Event (CRUCIAL)
 
 
 
