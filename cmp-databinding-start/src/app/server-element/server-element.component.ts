@@ -12,7 +12,8 @@ import {
   AfterViewInit,
   AfterViewChecked,
   ViewChild,
-  ElementRef} from '@angular/core';
+  ElementRef,
+  ContentChild} from '@angular/core';
 
 @Component({
   selector: 'app-server-element',
@@ -25,7 +26,8 @@ export class ServerElementComponent implements OnInit, OnChanges,
 DoCheck, AfterContentInit, AfterContentChecked,
 OnDestroy, AfterViewInit, AfterViewChecked {
 
-  @ViewChild('heading') heading: ElementRef;
+  @ViewChild('heading') Heading: ElementRef;
+  @ContentChild('contentParagraph') ContentParagraph: ElementRef;
 
   ngAfterViewChecked(): void {
     console.log('777 ngAfterViewChecked called');
@@ -35,7 +37,7 @@ OnDestroy, AfterViewInit, AfterViewChecked {
 
     console.log('888 ngAfterViewInit called');
 
-    console.log('222 Text Content: ' + this.heading.nativeElement.textContent);
+    console.log('222 Text Content: ' + this.Heading.nativeElement.textContent);
   
 
   //  throw new Error("Method not implemented.");
@@ -53,6 +55,8 @@ OnDestroy, AfterViewInit, AfterViewChecked {
   ngAfterContentInit(): void {
 
     console.log('555 ngAfterContentInit called');
+    console.log('Reg2. Content: ' + this.ContentParagraph.nativeElement.textContent);
+  
     //throw new Error("Method not implemented.");
   }
   
@@ -73,7 +77,8 @@ OnDestroy, AfterViewInit, AfterViewChecked {
   ngOnInit() {
 
     console.log('ngOnInit called');
-    console.log('Text Content: ' + this.heading.nativeElement.textContent);
+    console.log('Text Content: ' + this.Heading.nativeElement.textContent);
+    console.log('Reg. Content: ' + this.ContentParagraph.nativeElement.textContent);
   
   }
 
