@@ -30,5 +30,11 @@ export class GameControlComponent implements OnInit {
 
   }
 
+  onGamePaused(numNext) {
+    clearInterval(this.ref);
+
+  }
+
+
 
 }
