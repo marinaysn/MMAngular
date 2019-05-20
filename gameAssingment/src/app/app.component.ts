@@ -9,6 +9,6 @@ export class AppComponent {
   title = 'gameAssingment';
 
   onIntervalFired(numNext: number){
-
+    console.log(numNext);
   };
 }
