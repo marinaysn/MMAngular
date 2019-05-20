@@ -1,23 +1,23 @@
 <!-- Assingment 4 
-1. Create three new components GameControl, Odd and Even
-2. The GameControl conponent should have buttons to start and stop the gane.
-3. When strting the game, an event (holding an incrementing number) should get emitted each second (ref = setInterval())
-4. The event should be listenable from outside the component
-5. When stopping the game, no more events should get emitted (clearInterval(ref))
+1. Create three new components GameControl, Odd and Even - done
+2. The GameControl conponent should have buttons to start and stop the game.  - done
+3. When strting the game, an event (holding an incrementing number) should get emitted each second (ref = setInterval()) - done
+4. The event should be listenable from outside the component - done
+5. When stopping the game, no more events should get emitted (clearInterval(ref))  - done
+
 6. A new Odd component should get created for every odd number emitted, the same should happen for the Even Components (on even numbers)
 7. Simply output Odd - NUMBER or EVEN - NUMBER in the two components
 8. Style the element (e.g paragraph) holding your utput text differently in both components -->
 
 <div class="container">
-    <div class="row">
-      <div class="col-xs-12">
-        <h3>Assingment 4</h3>
-        <h3>Game Even/Odd</h3>
-        <hr />
-        
-        
-      </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <h3>Assingment 4</h3>
+      <h3>Game Even or Odd</h3>
+      <hr />
+      <app-game-control (interval)="onIntervalFired()"> </app-game-control>
     </div>
   </div>
-  
-  <hr />
+</div>
+
+<hr />
