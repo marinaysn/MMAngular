@@ -8,14 +8,18 @@ import { Component, Input } from '@angular/core';
 export class AppComponent {
   title = 'gameAssingment';
 
+  turnOff: boolean = true;
   numAllNumbers: number[] = [];
 
-  onSetInterval(numNext: number){
+  onSetInterval(numNext: number) {
     console.log(numNext);
     this.numAllNumbers.push(numNext);
+  };
 
-    if (numNext < 0) {
-      this.numAllNumbers.length = 0;
-    }
+  onturnOnOff(tOff: boolean){
+   if (!tOff) {
+     this.turnOff = false
+     this.numAllNumbers.length = 0;
+    };
   };
 }

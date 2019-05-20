@@ -7,7 +7,10 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class GameControlComponent implements OnInit {
   numNext: number = 0;
+
   ref;
+
+  @Output() turnOnOff = new EventEmitter<boolean>();
 
   @Output() intervalSet = new EventEmitter<number>();
   constructor() { }
@@ -15,6 +18,7 @@ export class GameControlComponent implements OnInit {
   }
 
   onGameStarted(numNext) {
+    console.log('MMM: ' + numNext);
     this.ref = setInterval(() => {
       this.intervalSet.emit(++this.numNext)
     }, 1000);
@@ -22,12 +26,12 @@ export class GameControlComponent implements OnInit {
 
   onGameEnded(numNext) {
     this.numNext = 0;
+
     clearInterval(this.ref);
-    this.intervalSet.emit(-1)
+    this.turnOnOff.emit(false);
   }
 
   onGamePaused(numNext) {
     clearInterval(this.ref);
-
   }
 }

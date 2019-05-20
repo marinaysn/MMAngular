@@ -1,14 +1,13 @@
 <!-- Assingment 4 
 1. Create three new components GameControl, Odd and Even - done
 2. The GameControl conponent should have buttons to start and stop the game.  - done
-3. When strting the game, an event (holding an incrementing number) should get emitted each second (ref = setInterval()) - done
+3. When starting the game, an event (holding an incrementing number) should get emitted each second (ref = setInterval()) - done
 4. The event should be listenable from outside the component - done
-5. When stopping the game, no more events should get emitted (clearInterval(ref))  - done
-
+5. When stopping the game, no more events should get emitted (clearInterval(ref)) - done
 6. A new Odd component should get created for every odd number emitted, the same should happen 
-for the Even Components (on even numbers)
-7. Simply output Odd - NUMBER or EVEN - NUMBER in the two components
-8. Style the element (e.g paragraph) holding your utput text differently in both components -->
+for the Even Components (on even numbers) - done
+7. Simply output Odd - NUMBER or EVEN - NUMBER in the two components - done
+8. Style the element (e.g paragraph) holding your utput text differently in both components  - done-->
 
 <div class="container">
   <div class="row">
@@ -16,18 +15,20 @@ for the Even Components (on even numbers)
       <h3>Assingment 4</h3>
       <h3>Game Even or Odd</h3>
       <hr />
-      <app-game-control (intervalSet)="onSetInterval($event)">
+      <app-game-control 
+      (intervalSet)="onSetInterval($event)"
+      (turnOnOff)="onturnOnOff($event)"
+      >
       </app-game-control>
     </div>
   </div>
 
-    <div class="row" *ngFor="let item of numAllNumbers">
-      <div class="col-xs-12">
-        <app-even *ngIf="item % 2 === 0 && item !== 0" [num]="item"> </app-even>
-        <app-odd *ngIf="item % 2 !== 0 && item !== 0" [num]="item"> </app-odd>
-      </div>
+  <div class="row" *ngFor="let item of numAllNumbers">
+    <div class="col-xs-12">
+      <app-even *ngIf="item % 2 === 0 && item !== 0" [num]="item"> </app-even>
+      <app-odd *ngIf="item % 2 !== 0 && item !== 0" [num]="item"> </app-odd>
     </div>
-
+  </div>
 
   <hr />
 </div>
