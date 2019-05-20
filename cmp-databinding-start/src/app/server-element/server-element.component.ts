@@ -26,6 +26,8 @@ export class ServerElementComponent implements OnInit, OnChanges,
 DoCheck, AfterContentInit, AfterContentChecked,
 OnDestroy, AfterViewInit, AfterViewChecked {
 
+  @Input('srvElement') element: {type: string, name: string, content: string};
+
   @ViewChild('heading') Heading: ElementRef;
   @ContentChild('contentParagraph') ContentParagraph: ElementRef;
 
@@ -61,7 +63,7 @@ OnDestroy, AfterViewInit, AfterViewChecked {
   }
   
 
-  @Input('srvElement') element: {type: string, name: string, content: string};
+
 
   constructor() {
     console.log('Constructor called');

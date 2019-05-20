@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +8,14 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'gameAssingment';
 
-  onIntervalFired(numNext: number){
+  numAllNumbers: number[] = [];
+
+  onSetInterval(numNext: number){
     console.log(numNext);
+    this.numAllNumbers.push(numNext);
+
+    if (numNext < 0) {
+      this.numAllNumbers.length = 0;
+    }
   };
 }
