@@ -13,6 +13,7 @@ export class GameControlComponent implements OnInit {
   @Output() turnOnOff = new EventEmitter<boolean>();
 
   @Output() intervalSet = new EventEmitter<number>();
+  
   constructor() { }
   ngOnInit() {
   }
