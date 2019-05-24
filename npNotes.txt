@@ -41,7 +41,7 @@ to Add a component:
 	4. component is just a class.We should export this class to use it
 		export class ServerComponent {
 		}
-	5. it needs a decorator @Component with valid import
+	5. it needs a decorator @Component with valid import (decorator -  provides metadata about a class)
 	6. Then configure inside decorator with selector, templateUrl, etc
 
 
@@ -73,6 +73,8 @@ ex:
 })
 
 decorator must always have either templateURL or template
+(The decorator provides configuration information through its properties, 
+which in the case of @Component includes properties called selector and templateUrl, etc.)
 
 or 
 ex2:
@@ -106,7 +108,7 @@ ex:
 NOTE: Styles or styleURLs must be an array [ '', '' ]
 
 --- Lesson 2-21: ---
-
+decorator -  provides metadata about a class
 Learning decorator selector:
 in servers.component.ts change selector to be an attribute: '[app-servers]' instead of selector: 'app-root',
 ex:

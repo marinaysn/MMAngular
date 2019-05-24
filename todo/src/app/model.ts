@@ -12,7 +12,7 @@ export class Model {
     user;
     items;
     constructor() {
-        this.user = "Adam";
+        this.user = "Anna";
         this.items = [new TodoItem("Buy Flowers", false),
         new TodoItem("Get Shoes", false),
         new TodoItem("Collect Tickets", false),

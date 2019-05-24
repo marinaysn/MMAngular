@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Model } from "./model";
+import { isNgTemplate } from '@angular/compiler';
 
 
 @Component({
@@ -13,6 +14,10 @@ export class AppComponent {
 
   getName() {
     return this.model.user;
+  }
+
+  getTodoItems(){
+    return this.model.items.filter((i: { done: boolean; }) =>!i.done);
   }
 
 }
