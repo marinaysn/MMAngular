@@ -1,5 +1,9 @@
 <h3 class="bg-primary p-1 text-white">{{ getName() }}'s To Do List</h3>
 
+<div class="my-1">
+  <input type="form-control" #todoText />
+  <button class="btn btn-primary mt-1" (click)="addTodoItem(todoText.value)">Add New Item</button>
+</div>
 <table class="table table-striped table-bordered">
   <thead>
     <tr>
