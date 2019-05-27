@@ -44,7 +44,7 @@ Binding to Custom Event (CRUCIAL because component communication is very importa
 
 * in app.ts
 ...
-need to create 2 methods  onServerAdded and onBlueprintAdded
+need to create 2 methods onServerAdded and onBlueprintAdded
 so it will know from cockpit.html that button was clicked 
 to create these functionality. 
 

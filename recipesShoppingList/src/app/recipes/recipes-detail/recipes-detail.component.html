@@ -6,7 +6,7 @@
 
 <div class="row">
   <div class="col-xs-12">
-    <h1>Recipe Name</h1>
+    <h1>{{ recipeAdd.name }}</h1>
   </div>
 </div>
 <div class="row">
@@ -28,11 +28,14 @@
 
 <div class="row">
   <div class="col-xs-12">
-    Description:
 
+  <br />
+   Description: {{ recipeAdd.description}}
+   <br /><br />
+  <img src="{{ recipeAdd.imagePath}}" width="300px" height="200px" alt="{{ recipeAdd.name }}">
   </div>
 </div>
-
+<br /><br />
 <div class="row">
     <div class="col-xs-12">
       Ingredients:
