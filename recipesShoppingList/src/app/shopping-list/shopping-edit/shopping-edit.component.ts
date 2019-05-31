@@ -1,4 +1,5 @@
-import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild, EventEmitter, Output } from '@angular/core';
+import { Ingredient } from 'src/app/shared/Ingredient.model';
 
 @Component({
   selector: 'app-shopping-edit',
@@ -9,9 +10,10 @@ export class ShoppingEditComponent implements OnInit {
 
  
   printNameRef: string = "";
-  printAmountRef: string = "";
+  printAmountRef: number;
 
-  ingridience = [];
+  ingridient = [];
+  @Output() ingridientAdded = new EventEmitter<Ingredient>();
 
   @ViewChild('amountInput') amountInputRef: ElementRef;
   @ViewChild('nameInput') nameInputRef: ElementRef;
@@ -24,13 +26,15 @@ export class ShoppingEditComponent implements OnInit {
   onNameInput(){
     console.log('1111' + this.nameInputRef.nativeElement.value);
 
-    this.printNameRef = this.nameInputRef.nativeElement.value;
-    this.printAmountRef = " - " + this.amountInputRef.nativeElement.value;
+    this.printNameRef = this.nameInputRef.nativeElement.value + " - ";
+    this.printAmountRef = this.amountInputRef.nativeElement.value;
 
-    this.ingridience.push({name: this.printNameRef, num: this.printAmountRef})
+    this.ingridient.push({name: this.printNameRef, num: this.printAmountRef})
+    const ing = new Ingredient(this.printNameRef, this.printAmountRef);
+    this.ingridientAdded.emit(ing);
   }
 
   onDelete() {
-    this.ingridience = [];
+    this.ingridient = [];
   }
 }

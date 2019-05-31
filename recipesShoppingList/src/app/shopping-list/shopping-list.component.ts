@@ -8,7 +8,9 @@ import {Ingredient} from '../shared/Ingredient.model'
 })
 export class ShoppingListComponent implements OnInit {
 
-  ingredients: Ingredient[] = [
+  ingredients: Ingredient[] = [];
+
+  ingredients2: Ingredient[] = [
     new Ingredient('ground beef', 2),
     new Ingredient('eggs', 2),
     new Ingredient('breadcrumb', 1),
@@ -21,6 +23,14 @@ export class ShoppingListComponent implements OnInit {
     new Ingredient('spinach', 2),
     new Ingredient('bacon', 10)
   ];
+
+
+  onNotify(ingArr: Ingredient){
+    
+    this.ingredients.push(ingArr);
+  }
+
+
 
   constructor() { }
 
