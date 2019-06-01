@@ -1,0 +1,110 @@
+--- Lesson 7-92 ---
+Create Basic Directive
+
+create new folder and file with directive.ts extention
+
+ex:
+import { Directive, ElementRef, OnInit } from "@angular/core";
+
+@Directive({
+    selector: '[appBasicHighlight]'
+
+})
+
+export class BasicHighlightDirective implements OnInit {
+
+    constructor(private elementRef: ElementRef) {}
+    
+    ngOnInit(): void {
+        this.elementRef.nativeElement.style.backgroundColor = 'green';
+    }   
+}
+
+
+***
+in app.module.ts
+
+need to declate new directive to be ablbe to use it
+
+ex:
+
+--> import { BasicHighlightDirective } from './basic-highlight/basic-highlight.directive';
+
+@NgModule({
+  declarations: [
+      AppComponent,
+ -->  BasicHighlightDirective
+  ],
+
+  and then to use it:
+
+  ex:
+  <p appBasicHighlight>Stayle me with Basic Highlight Directive</p>
+
+..........................
+
+--- Lesson 7-00 ---
+.......
+
+.......
+ex:
+
+..........................
+
+--- Lesson 7-00 ---
+.......
+
+.......
+ex:
+
+..........................
+
+--- Lesson 7-00 ---
+.......
+
+.......
+ex:
+
+..........................
+
+--- Lesson 7-00 ---
+
+
+..........................
+
+--- Lesson 7-00 ---
+.......
+
+.......
+ex:
+
+..........................
+
+--- Lesson 7-00 ---
+.......
+
+.......
+ex:
+
+..........................
+
+--- Lesson 7-00 ---
+.......
+
+.......
+ex:
+
+..........................
+
+--- Lesson 7-00 ---
+
+
+..........................
+
+--- Lesson 7-00 ---
+.......
+
+.......
+ex:
+
+..........................
