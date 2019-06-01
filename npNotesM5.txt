@@ -75,9 +75,33 @@ export class BasicHighlightDirective implements OnInit {
 
 --- Lesson 7-95 ---
 .......
-
+using @HostListener
 .......
 ex:
+
+export class BetterHighlightDirective {
+    constructor(private elRef: ElementRef, private ren: Renderer2) {}
+
+    ngOnInit(): void {
+    // this.ren.setStyle(this.elRef.nativeElement, 'background-color', 'blue', false);
+    
+    }
+//mouseenter or mouseleave are DOM elements
+    @HostListener('mouseenter') mouseOver(eventData: Event){
+        this.ren.setStyle(this.elRef.nativeElement, 'background-color', '#CCDEF2');
+     
+    }
+
+    @HostListener('mouseleave') mouseLeave(){
+        this.ren.setStyle(this.elRef.nativeElement, 'background-color', '#D9FFED');
+    }
+}
+
+to use 
+
+ex:
+      <p appBetterHighlight>Style me with Better Highlight Directive</p>
+
 
 ..........................
 

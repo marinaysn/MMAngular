@@ -13,6 +13,8 @@ export class BasicHighlightDirective implements OnInit {
         // this.elementRef.nativeElement.style.backgroundColor = 'green';
 
         this.renderer.setStyle(this.elementRef.nativeElement, 'background-color', '#CCDEF2')
+    
     }
+
     
 }
