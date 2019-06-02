@@ -20,6 +20,17 @@
           class="list-group-item" *ngFor="let even of evenNumbers; let i = index"> {{even }}
         </li>
       </div>
+
+      <ng-template [ngIf]="onlyOdd">
+          <div>
+              <li
+          [ngClass]="{'odd': true}"
+            class="list-group-item" 
+            *ngFor="let odd of oddNumbers; let i = index"> {{odd }}
+          </li>
+  
+          </div>
+        </ng-template>
       </ul>
 
       <p appBasicHighlight>Style me with Basic Highlight Directive</p>
@@ -28,9 +39,7 @@
       <p appBindBindDirectory defaultColor="yellow" [highlightColor]="'green'">Style me with Binding Directive</p>
       <p appBindBindDirectory>Style me with Binding Directive 2 </p>
       
-      <ng-template [ngIf]="onlyOdd">
-        <!-- <p > Only odd</p> -->
-      </ng-template>
+     
     </div>
   </div>
 </div>
