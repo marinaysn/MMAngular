@@ -24,6 +24,10 @@
 
       <p appBasicHighlight>Style me with Basic Highlight Directive</p>
       <p appBetterHighlight>Style me with Better Highlight Directive</p>
+      <p appBindHost>Style me with Host Binding Directive</p>
+      <p appBindBindDirectory [defaultColor]="'yellow'" [highlightColor]="'green'">Style me with Binding Directive</p>
+      <p appBindBindDirectory >Style me with Binding Directive 2 </p>
+      
       <ng-template [ngIf]="onlyOdd">
         <!-- <p > Only odd</p> -->
       </ng-template>
