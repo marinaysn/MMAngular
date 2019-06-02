@@ -13,6 +13,8 @@ export class AppComponent {
   title: string = "Show ODD numbers";
   title2: string = "EVEN numbers:";
 
+  value: number =5;
+
   onClick(){
     this.onlyOdd = !this.onlyOdd;
 

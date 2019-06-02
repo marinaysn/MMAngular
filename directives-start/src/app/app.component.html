@@ -37,7 +37,7 @@
           </div>
         </ng-template> -->
 
-          <div *appUnless="onlyOdd">
+        <div *appUnless="onlyOdd">
           <li
             class="list-group-item"
             *ngFor="let even of evenNumbers; let i = index"
@@ -45,8 +45,6 @@
             {{ even }}
           </li>
         </div>
-
-        
       </ul>
 
       <p appBasicHighlight>Style me with Basic Highlight Directive</p>
@@ -56,6 +54,20 @@
         Style me with Binding Directive
       </p>
       <p appBindBindDirectory>Style me with Binding Directive 2</p>
+
+      <!-- case for ng-Switch demonstrated -->
+      <div>
+        <span [ngSwitch]="value">
+          <p *ngSwitchCase="5">
+            Value is 5
+          </p>
+          <p *ngSwitchCase="10">
+            Value is 10
+          </p>
+          <p *ngSwitchDefault>
+            Value is Default
+          </p> </span>
+      </div>
     </div>
   </div>
 </div>
