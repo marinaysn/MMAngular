@@ -1,45 +1,61 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-12">
-      <button
-        class="btn btn-primary"
-        (click)="onClick()">{{title}}</button>
-      <br><br>
+      <button class="btn btn-primary" (click)="onClick()">{{ title }}</button>
+      <br /><br />
       <ul class="list-group">
-        <p > {{title2}}</p>
+        <p>{{ title2 }}</p>
 
         <div *ngIf="onlyOdd">
-        <li
-        [ngClass]="{'odd': true}"
-        [ngStyle]="{backgroundColor: 'yellow'}"
-          class="list-group-item" *ngFor="let odd of oddNumbers; let i = index"> {{odd }}
-        </li>
-      </div>
-      <div *ngIf="!onlyOdd">
-        <li
-          class="list-group-item" *ngFor="let even of evenNumbers; let i = index"> {{even }}
-        </li>
-      </div>
-
-      <ng-template [ngIf]="onlyOdd">
-          <div>
-              <li
-          [ngClass]="{'odd': true}"
-            class="list-group-item" 
-            *ngFor="let odd of oddNumbers; let i = index"> {{odd }}
+          <li
+            [ngClass]="{ odd: true }"
+            [ngStyle]="{ backgroundColor: 'yellow' }"
+            class="list-group-item"
+            *ngFor="let odd of oddNumbers; let i = index"
+          >
+            {{ odd }}
           </li>
-  
+        </div>
+        <!-- <div *ngIf="!onlyOdd">
+          <li
+            class="list-group-item"
+            *ngFor="let even of evenNumbers; let i = index"
+          >
+            {{ even }}
+          </li>
+        </div>
+
+        <ng-template [ngIf]="onlyOdd">
+          <div>
+            <li
+              [ngClass]="{ odd: true }"
+              class="list-group-item"
+              *ngFor="let odd of oddNumbers; let i = index"
+            >
+              {{ odd }}
+            </li>
           </div>
-        </ng-template>
+        </ng-template> -->
+
+          <div *appUnless="onlyOdd">
+          <li
+            class="list-group-item"
+            *ngFor="let even of evenNumbers; let i = index"
+          >
+            {{ even }}
+          </li>
+        </div>
+
+        
       </ul>
 
       <p appBasicHighlight>Style me with Basic Highlight Directive</p>
       <p appBetterHighlight>Style me with Better Highlight Directive</p>
       <p appBindHost>Style me with Host Binding Directive</p>
-      <p appBindBindDirectory defaultColor="yellow" [highlightColor]="'green'">Style me with Binding Directive</p>
-      <p appBindBindDirectory>Style me with Binding Directive 2 </p>
-      
-     
+      <p appBindBindDirectory defaultColor="yellow" [highlightColor]="'green'">
+        Style me with Binding Directive
+      </p>
+      <p appBindBindDirectory>Style me with Binding Directive 2</p>
     </div>
   </div>
 </div>

@@ -7,6 +7,7 @@ import { BasicHighlightDirective } from './basic-highlight/basic-highlight.direc
 import { BetterHighlightDirective } from './better-highlight/better-highlight.directive';
 import { BindHostDirective } from './bind-host/bind-host.directive';
 import { BindDirectory } from './bind-directory/bind-directory.directive';
+import { UnlessDirective } from './unless.directive';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { BindDirectory } from './bind-directory/bind-directory.directive';
     BasicHighlightDirective,
     BetterHighlightDirective,
     BindHostDirective,
-    BindDirectory
+    BindDirectory,
+    UnlessDirective
   ],
   imports: [
     BrowserModule,

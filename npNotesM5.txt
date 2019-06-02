@@ -114,7 +114,9 @@ ex:
 ..........................
 
 --- Lesson 7-00 ---
+create directive from cli use
 
+ng g d <nameOfDirective>
 
 ..........................
 
