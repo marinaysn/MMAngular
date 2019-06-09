@@ -14,10 +14,7 @@ export class AppComponent implements OnInit{
  
   constructor(private accountsService: AccountsService ) {}
 
-
-
   ngOnInit(): void {
-   // throw new Error("Method not implemented.");
     this.accounts = this.accountsService.account;
   }
 }
