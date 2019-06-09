@@ -21,5 +21,7 @@ export class AccountComponent {
    
     // console.log('A server status changed, new status: ' + status);
    // this.loggingServiceScd.logStatusChange(status);
+
+   this.accountService.statusUpdated.emit(status);
   }
 }
