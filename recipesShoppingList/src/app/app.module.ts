@@ -29,7 +29,7 @@ import { ShoppingListService } from './shopping-list/ShoppingListService.service
   imports: [
     BrowserModule, FormsModule
   ],
-  providers: [],
+  providers: [ShoppingListService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

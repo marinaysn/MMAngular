@@ -1,40 +1,47 @@
 import { Component, OnInit } from '@angular/core';
 import {Ingredient} from '../shared/Ingredient.model'
+import { ShoppingListService } from './ShoppingListService.service';
+
 
 @Component({
   selector: 'app-shopping-list',
   templateUrl: './shopping-list.component.html',
   styleUrls: ['./shopping-list.component.css']
+  
 })
 export class ShoppingListComponent implements OnInit {
 
-  ingredients: Ingredient[] = [];
+  ingredients: Ingredient[];
+  ingredients2: Ingredient[];
 
-  ingredients2: Ingredient[] = [
-    new Ingredient('ground beef', 2),
-    new Ingredient('eggs', 2),
-    new Ingredient('breadcrumb', 1),
-    new Ingredient('salt', 2),
-    new Ingredient('pepper', 1),
-    new Ingredient('garlic powder', 2),
-    new Ingredient('ham', 4),
-    new Ingredient('breadcrumb', 1),
-    new Ingredient('cheddar cheese', 8),
-    new Ingredient('spinach', 2),
-    new Ingredient('bacon', 10)
-  ];
-
-
-  onNotify(ingArr: Ingredient){
-    
-    this.ingredients.push(ingArr);
-  }
-
-
-
-  constructor() { }
+  constructor( private shopList: ShoppingListService) { }
 
   ngOnInit() {
+
+  this.ingredients =  this.shopList.getIngredient();
+  this.ingredients2 =  this.shopList.getIngredient2();
+
+  this.shopList.ingridientAdded
+  .subscribe(
+    (ingredients: Ingredient[]) =>{
+      this.ingredients = ingredients;
+    }
+  )
+
+  this.shopList.ingridientAdded2
+  .subscribe(
+    (ingredients: Ingredient[]) =>{
+      this.ingredients2 = ingredients;
+    }
+  )
+
+
   }
+
+  // onNotify(ingArr: Ingredient){
+      
+  //   this.ingredients.push(ingArr);
+  //   this.ingredients2.push(ingArr);
+  //  }
 
 }
