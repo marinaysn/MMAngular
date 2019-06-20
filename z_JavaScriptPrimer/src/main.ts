@@ -1,3 +1,18 @@
+import { Name, WeatherLocation } from "./modules/NameAndWeather";
+import { Name as OtherName } from "./modules/DuplicateName";
+import { TempConverter } from "./modules/tempConverter";
+
+
+let name = new Name("Alex", "Freeman");
+let loc = new WeatherLocation("raining", "London");
+console.log(name.nameMessage);
+console.log(loc.weatherMessage);
+let other = new OtherName();
+console.log(other.message);
+
+let cTemp = TempConverter.convertFtoC1(38);
+console.log(`The temp is ${cTemp}C`);
+
 // filter(test) This method returns a new array containing the items for which the test
 // function returns true.
 
@@ -17,10 +32,10 @@ let totalValue = products
 
 console.log("Total value: $" + totalValue.toFixed(2));
 
-let totalValue2 = products
-.reduce((prev, item) => prev + (item.price * item.stock), 0);
+// let totalValue2 = products
+// .reduce((prev, item) => prev + (item.price * item.stock), 0);
 
-console.log(totalValue2);
+// console.log(totalValue2);
 
 // console.log("Hello");
 
@@ -84,3 +99,10 @@ console.log(totalValue2);
 // for (let i = 0; i < otherArray.length; i++) {
 // console.log(`Array item ${i}: ${otherArray[i]}`);
 // }
+
+
+let myData = new Object();
+myData.name = "Anna";
+myData.weather = "sunny";
+console.log("Hello " + myData.name + ".");
+console.log("Today is " + myData.weather + ".");
