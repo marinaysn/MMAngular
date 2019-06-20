@@ -5,7 +5,7 @@ Angular Notes:
 install new project :
 	ng new my-first-app
 
-Bring up Development server (while in the aangular project)
+Bring up Development server (while in the angular project)
 	ng serve
 
   or ng serve --port 4200 --open
