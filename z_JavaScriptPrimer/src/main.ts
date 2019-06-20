@@ -13,6 +13,15 @@ console.log(other.message);
 let cTemp = TempConverter.convertFtoC1(38);
 console.log(`The temp is ${cTemp}C`);
 
+let tuple: [string, string, string];
+tuple = ["London", "raining", TempConverter.convertFtoC(38)]
+console.log(`It is ${tuple[2]} degrees C and ${tuple[1]} in ${tuple[0]}`);
+
+console.log(tuple);
+
+
+
+
 // filter(test) This method returns a new array containing the items for which the test
 // function returns true.
 
@@ -106,3 +115,14 @@ myData.name = "Anna";
 myData.weather = "sunny";
 console.log("Hello " + myData.name + ".");
 console.log("Today is " + myData.weather + ".");
+
+
+let myData2 = {
+  name: "Adam",
+  weather: "sunny",
+  printMessages: function () {
+    console.log("Hello " + this.name + ". ");
+    console.log("Today is " + this.weather + ".");
+  }
+};
+myData2.printMessages();
