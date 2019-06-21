@@ -1,0 +1,12 @@
+to start 
+
+--1--
+Starting the RESTful Web Service
+run 
+npm run json
+
+The RESTful web service is configured to run on port 3500. To test the web service request, use
+the browser to request the URL http://localhost:3500/products/1. The browser will display a JSON
+representation of one of the products
+
+--2--
