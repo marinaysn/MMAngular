@@ -4,7 +4,7 @@ import { StaticDataSource } from "./static.datasource";
 import { Course } from "./course.model";
 
 @Injectable()
-export class ProductRepository {
+export class CourseRepository {
     private courses: Course[] = [];
     private categories: string[] =[];
 
