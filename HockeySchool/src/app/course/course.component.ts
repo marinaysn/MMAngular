@@ -1,0 +1,22 @@
+import { Component } from "@angular/core";
+import { CourseRepository } from "../model/course.repository";
+import { Course } from "../model/course.model";
+
+
+@Component({
+
+    selector: "course",
+    templateUrl: "course.component.html"
+})
+
+export class CourseComponent{
+    constructor(private repo: CourseRepository){}
+
+    get courses(): Course[] {
+        return this.repo.getCourses();
+    }
+
+    get categories(): string[] {
+        return this.repo.getCategories();
+    }
+}

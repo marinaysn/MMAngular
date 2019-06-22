@@ -16,11 +16,11 @@ export class CourseRepository {
         });
     }
 
-    getProducts(category: string = null): Course [] {
+    getCourses(category: string = null): Course [] {
         return this.courses.filter(p => category == null || category == p.category);
     }
 
-    getProduct(id: number): Course {
+    getCourse(id: number): Course {
         return this.courses.find(p => p.id == id);
     }
 
