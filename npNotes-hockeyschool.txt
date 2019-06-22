@@ -10,3 +10,14 @@ the browser to request the URL http://localhost:3500/products/1. The browser wil
 representation of one of the products
 
 --2--
+Observable class and @Injectable decorator
+
+The Observable class is provided by the Reactive Extensions package, which is used by Angular to
+handle state changes in applications. Observable object represents an asynchronous task that will produce a result at
+some point in the future. Angular exposes its use of Observable objects for some features, including making
+HTTP requests.
+
+The @Injectable  decorator is used to tell Angular that this class will be used as a service, 
+which allows other classes to access its functionality through a feature called dependency injection.
+
+--3--

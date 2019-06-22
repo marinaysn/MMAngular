@@ -4,7 +4,8 @@ export class Course {
         public name: string,
         public category?: string,
         public description?: string,
-        public price?: number
+        public price?: number,
+        public coach?: string
     )
     { }
 }
