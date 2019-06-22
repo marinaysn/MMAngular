@@ -2,10 +2,12 @@ import { Component } from "@angular/core";
 import { ProductRepository } from "../model/product.repository";
 import { Product } from "../model/product.model";
 
+
 @Component({
     selector: "store",
     templateUrl: "store.component.html"
 })
+
 export class StoreComponent{
 
     public selectedCategory = null;

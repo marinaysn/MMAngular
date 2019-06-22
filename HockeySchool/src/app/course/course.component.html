@@ -1,13 +1,19 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col bg-dark text-white">
-      <h2>Hockey School
-    </h2>
+      <h2>Hockey School</h2>
     </div>
   </div>
   <div class="row">
-    <div class="col-3 bg-info p-2 text-white">
-      {{ categories.length }} Categories
+    <div class="col-3 p-2">
+  <button class="btn btn-block btn-outline-secondary"
+(click) = "changeCategory()">Home</button>
+
+<button *ngFor="let cat of categories"
+class="btn btn-block btn-outline-info"
+[class.active]= "cat== selectedCategory"
+(click)=changeCategory(cat)>{{cat}}</button>
+
     </div>
     <div class="col-9 p-2">
       <div class="card m-1 p-1 bg-transparent" *ngFor="let course of courses">

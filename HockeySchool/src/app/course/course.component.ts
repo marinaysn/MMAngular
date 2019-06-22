@@ -15,10 +15,14 @@ export class CourseComponent{
     constructor(private repo: CourseRepository){}
 
     get courses(): Course[] {
-        return this.repo.getCourses();
+        return this.repo.getCourses(this.selectedCategory);
     }
 
     get categories(): string[] {
         return this.repo.getCategories();
+    }
+
+    changeCategory(newCat?: string){
+        this.selectedCategory = newCat;
     }
 }
