@@ -1,16 +1,26 @@
 <div class="container-fluid">
-        <div class="row">
-          <div class="col bg-dark text-white">
-            <a class="navbar-brand">Hockey Store</a>
-          </div>
-        </div>
-        <div class="row text-white">
-          <div class="col-3 bg-info p-2">
-              {{ categories.length }} Categories
-          </div>
-          <div class="col-9 bg-success p-2">
-              {{ courses.length }} Courses
-          </div>
-        </div>
+  <div class="row">
+    <div class="col bg-dark text-white">
+      <h2>Hockey School
+      <a class="navbar-brand">Hockey School</a>
+    </h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-3 bg-info p-2 text-white">
+      {{ categories.length }} Categories
+    </div>
+    <div class="col-9 p-2">
+      <div class="card m-1 p-1 bg-transparent" *ngFor="let course of courses">
+        <h5>
+          {{ course.name }}
+        
+        <span class="badge badge-pill badge-primary float-right">
+          {{ course.price | currency: "$CAN":"symbol":"2.2-2" }}
+        </span>
+      </h5>
+        <div class="card-text bg-white p-1">{{ course.description }}</div>
       </div>
-      
+    </div>
+  </div>
+</div>
